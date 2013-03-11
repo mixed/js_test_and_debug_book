@@ -1,0 +1,40 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script>
+		
+		function Klass(prop){
+		  this.prop = prop;
+		}
+		
+		var Comparison  = {
+			"createKlass" : function(){
+				 var cache = [];
+				 for (var i = 0; i < 100; ++i){
+				  cache.push(new Klass(i));
+				 }
+				 this.cacheKlass= new Klass(cache);		
+			},
+			"addKlass" : function(){
+				for (var i = 0; i < 100; ++i){
+				 this.cacheKlass.prop.push(new Klass(i));
+				}
+			},
+			"init" : function(){
+				this.createKlass();
+			},
+			"release":function(){
+				this.cacheKlass = null;
+			}
+		}
+		
+		Comparison.init();
+	
+	</script>
+	<input type="button" value="release" onclick="Comparison.release();"/>
+	<input type="button" value="add" onclick="Comparison.addKlass();"/>
+</body>
+</html>

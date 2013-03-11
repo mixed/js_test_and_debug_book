@@ -1,0 +1,30 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+<div id="frame"></div>
+	<script>
+		var Containment = {
+			"makeClosure" : function(param){
+				return function(){
+					return param;
+				}
+			},
+			"appendIframe" : function(){
+				var iframe = document.createElement("iframe");
+				iframe.setAttribute("src", "iframe.html");
+				document.getElementById("frame").appendChild(iframe);
+			},
+			"init":function(){
+				this.closure = this.makeClosure("closure");
+				this.closure.prop = "prop";
+				this.appendIframe();
+			}
+		};
+	
+		Containment.init();
+	</script>
+</body>
+</html>

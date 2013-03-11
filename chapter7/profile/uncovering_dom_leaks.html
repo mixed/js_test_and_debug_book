@@ -1,0 +1,32 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script>
+		var DetachedDOM = {
+			"append" : function(){
+				this.parent = document.getElementById("parent");
+				this.offline = document.createElement("div");
+				this.parent.appendChild(this.offline);
+			},
+			"detach" : function(){
+				this.parent.appendChild(this.offline);
+			},
+			"leak" : function(){
+				for (var i = 0; i < 10; ++i) {
+					var div = document.createElement('div');
+					this.offline.appendChild(div);
+				}	
+			},
+			"init" : function(){
+				this.append();
+				this.detach();
+				this.leak();
+			}
+		};
+		DetachedDOM.init();
+	</script>
+</body>
+</html>

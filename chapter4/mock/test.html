@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>mock 테스트</title>
+	<link rel="stylesheet" href="../../asset/lib/qunit.css"/>
+	<script src="../../asset/lib/qunit.js"></script>
+	<script src="../../asset/mock/jsmocktool.js"></script>
+	<script src="../../asset/etc/util.js"></script>
+	
+</head>
+<body>
+ <div id="qunit"></div>
+ <div id="qunit-fixture">
+		타입 : <select id="type" name="type">
+			<option value="0">적금</option>
+			<option value="1">예금</option>
+		</select>
+		기간 : <input type="text" id="period" name="period" value="" />
+		금액 : <input type="text" id="money" name="money" value="" />
+		연이율 : <input type="text" id="rate" name="rate" value="" /> 
+		<input type="button" id="exec" name="exec" value="계산" onclick="Calculate.exec();" />
+		<div id="result"></div>
+ </div>
+ <script src="calculate.js"></script>
+ <script src="calculate.test.js"></script>
+</body>
+</html>

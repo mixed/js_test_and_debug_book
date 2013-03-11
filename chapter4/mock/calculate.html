@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8" />
+		<title>예금 테스트</title>
+		<script src="../../asset/etc/util.js"></script>
+		<script src="calculate.js"></script>
+	</head>
+	<body>
+		타입 : <select id="type" name="type">
+			<option value="0">적금</option>
+			<option value="1">예금</option>
+		</select>
+		기간 : <input type="text" id="period" name="period" value="" />
+		금액 : <input type="text" id="money" name="money" value="" />
+		연이율 : <input type="text" id="rate" name="rate" value="" /> 
+		<input type="button" id="exec" name="exec" value="계산" onclick="Calculate.exec();" />
+		<div id="result"></div>
+	</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html> 
+<html>
+<head>
+	<meta charset="utf-8">
+</head>
+<body>
+	<script>
+		
+		function Klass(prop){
+		  this.prop = prop;
+		}
+		
+		var Bug = {
+			"createKlass" : function(){
+				 var cache = [];
+				 for (var i = 0; i < 100; ++i){
+				  cache.push(new Klass(i));
+				 }
+				 this.cacheKlass= new Klass(cache);		
+			},
+			"init" : function(){
+				this.createKlass();
+			},
+			"release":function(){
+				this.cacheKlass = null;
+			}
+		}
+		
+		Bug.init();
+	
+	</script>
+	<input type="button" value="release" onclick="Bug.release();"/>
+</body>
+</html>

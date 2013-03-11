@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>비동기 테스트 예제(delay)</title>
+	<meta charset="utf-8">
+	<style type="text/css" media="screen">
+		#toggle {
+			background-color:red;
+			width:100px;
+			height:100px;
+			cursor : pointer;
+		}
+		#toggle.on{
+			background-color:blue;
+		}
+	</style>
+	<script src="../../../asset/etc/util.js"></script>
+	<script src="ajax.js"></script>
+	</head>
+	<body>
+	<!--
+	주의. 서버에서 실행시키세요.
+	-->
+		<div id="toggle"></div>
+		<script>
+			attach($("toggle"),"click",click);
+		</script>
+	</body>
+</html>

@@ -5,37 +5,14 @@
 	<title>부분 실행 예제</title>
 	<link rel="stylesheet" href="../../asset/lib/qunit.css"/>
 	<script src="../../asset/lib/qunit.js"></script>
-	<!--script src="test/expect.js"></script-->
 </head>
 <body>
 	<div id="qunit"></div>
 	<div id="qunit-fixture">test markup</div>
-	<script>
-		QUnit.testStart(function( details ) {
-			console.log( "Now running: ", details.module, details.name );
-		});
-		QUnit.testStart(function( details ) {
-			console.log( "Now running2: ", details.module, details.name );
-		});
-		function returnTrue(){
-			return true;
-		}
-		module("test1");
-		test("returnTrue test입니다",function(){
-			ok(returnTrue());
-		});
-		test("ok test입니다",function(){
-			ok(true);
-		});
-		module("test2");
-		test("두 번째 ok test입니다",function(){
-			ok(true);
-		});
-		module("test3");
-		test("세 번째 ok test입니다",function(){
-			ok(true);
-		});
-
-	</script>
+	<script>// 예제 코드를 넣거나 </script>
+	<!--
+	아래 스크립트에 파일명을 넣으세요.
+	<script src="test/파일.js"</script>
+	-->
 </body>
 </html>

@@ -41,6 +41,6 @@ var CoverageCalculate = {
 		var total = oData.total;
 		var pass = oData.pass;
 		var rate = (Math.round((pass/total)*1000)/10);
-		return sType+" 커버리지는 전체"+total+"개 중 "+pass+"개를 통과했으며 "+rate+"% 입니니다.";
+		return sType+" 커버리지는 전체"+total+"개 중 "+pass+"개를 통과했으며 "+(isNaN(rate)?0:rate)+"% 입니니다.";
 	}
 };

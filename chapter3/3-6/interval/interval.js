@@ -1,4 +1,4 @@
-var cunt = 0;
+var count = 0;
 function interval(delay){
 	var intervalID = setInterval(function(){
 		count++;
@@ -7,4 +7,3 @@ function interval(delay){
 		}
 	},delay);
 }
-	
